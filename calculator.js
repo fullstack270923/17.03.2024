@@ -1,4 +1,11 @@
+const validate = (num1, num2)  => {
+    if (Math.floor(num1) !== num1 || Math.floor(num2) !== num2) {
+        throw TypeError('Use only integer numbers in my calculator')
+    }
+}
+
 const add = (num1, num2) => {
+    validate(num1, num2)
     return num1 + num2
 }
 
